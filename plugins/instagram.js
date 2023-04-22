@@ -34,7 +34,7 @@ command(
     let response = await getJson(
       `https://hermit-network.herokuapp.com/api/story?username=${match}&key=adithyan`
     );
-    if (!response.status) return message.reply("Not Found");
+    if (!response.status) return message.reply("Not Found❌");
     for (let i of response.result) {
       message.sendFromUrl(i);
     }

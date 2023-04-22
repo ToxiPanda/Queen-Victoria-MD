@@ -36,7 +36,7 @@ Function(
     type: "downloader",
   },
   async (message, match) => {
-    if (!match) return await message.sendMessage("Enter Search Term,number");
+    if (!match) return await message.sendMessage("Enter Search Term , Number");
     let [query, amount] = match.split(",");
     let result = await gimage(query, amount);
     await message.sendMessage(
@@ -73,9 +73,9 @@ command(
   },
   async (message, match, m) => {
     if (!message.reply_message)
-      return await message.reply("_Reply to a sticker_");
+      return await message.reply("_Reply to a Dticker_");
     if (message.reply_message.mtype !== "stickerMessage")
-      return await message.reply("_Not a sticker_");
+      return await message.reply("_Not a Sticker_❌");
     let buff = await m.quoted.download();
     return await message.sendMessage(buff, {}, "image");
   }
@@ -90,9 +90,9 @@ command(
   },
   async (message, match, m) => {
     if (!message.reply_message)
-      return await message.reply("_Reply to a sticker_");
+      return await message.reply("_Reply to a Sticker_");
     if (message.reply_message.mtype !== "stickerMessage")
-      return await message.reply("_Not a sticker_");
+      return await message.reply("_Not a Sticker_❌");
     let buff = await m.quoted.download();
     let buffer = await webp2mp4(buff);
     return await message.sendMessage(buffer, {}, "video");
@@ -156,7 +156,7 @@ command(
       });
     }
     search(match).then(async ({ videos }) => {
-      await message.reply(`_Downloading ${videos[0].title}_`);
+      await message.reply(`_Downloading.. ${videos[0].title}_`);
       ytv(videos[0].url).then(({ dl_link, title }) => {
         message.sendFromUrl(dl_link, { filename: title, quoted: message });
       });
@@ -190,7 +190,7 @@ command(
     match = match || message.reply_message.text;
     if (!match)
       return message.reply(
-        "_Send a direct media link_\n_*link;caption(optional)*_"
+        "_Send a Direct Media Link_\n_*link;caption(optional)*_"
       );
     try {
       let url = match.split(";")[0];
@@ -204,7 +204,7 @@ command(
       }
     } catch (e) {
       console.log(e);
-      message.reply("_No content found_");
+      message.reply("_No Content Found_❌");
     }
   }
 );
@@ -217,7 +217,7 @@ command(
     type: "Search",
   },
   async (message, match) => {
-    if (!match) return await message.reply("_Enter a search term_");
+    if (!match) return await message.reply("_Enter a Search Name_");
     let rows = [];
     search(match).then(async ({ videos }) => {
       videos.forEach((result) => {
@@ -275,7 +275,7 @@ command(
   async (message, match) => {
     match = match || message.reply_message.text;
     if (!match) return await message.reply("_Enter a URL_");
-    if (!ytIdRegex.test(match)) return await message.reply("_Invalid Url_");
+    if (!ytIdRegex.test(match)) return await message.reply("_Invalid Url_❌");
     yta(match).then(async ({ dl_link, title, thumb }) => {
       await message.reply(`_Downloading ${title}_`);
       let buff = await AddMp3Meta(dl_link, thumb, {

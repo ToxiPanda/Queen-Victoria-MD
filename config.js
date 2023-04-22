@@ -1,9 +1,7 @@
-/* Copyright (C) 2022 X-Electra.
-
+/* Copyright (C) 2023 Queeen Victoria.
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-
-X-asena X-Electra
+Queen Victoria - Mithum-Indumina
 */
 
 const { Sequelize } = require("sequelize");
@@ -23,14 +21,14 @@ module.exports = {
   LANG: process.env.LANG || "EN",
   HANDLERS:
     process.env.HANDLER === "false" || process.env.HANDLER === "null"
-      ? "^"
-      : "^[!]",
+      ? "^."
+      : "^[!].",
   RMBG_KEY: process.env.RMBG_KEY || false,
   BRANCH: "master",
-  PACKNAME: process.env.PACKNAME || "X-asena",
+  PACKNAME: process.env.PACKNAME || "🎀  𝒬𝓊𝑒𝑒𝓃 𝒱𝒾𝒸𝓉🌸𝓇𝒾𝒶  🎀",
   WELCOME_MSG: process.env.WELCOME_MSG || "Hi @user Welcome to @gname",
   GOODBYE_MSG: process.env.GOODBYE_MSG || "Hi @user It was Nice Seeing you",
-  AUTHOR: process.env.AUTHOR || "X-electra",
+  AUTHOR: process.env.AUTHOR || "ᗰ-I",
   DATABASE_URL: DATABASE_URL,
   DATABASE:
     DATABASE_URL === "./lib/database.db"
@@ -49,10 +47,10 @@ module.exports = {
           },
           logging: false,
         }),
-  SUDO: process.env.SUDO || "918113921898,919544951258",
+  SUDO: process.env.SUDO || "94757558130,94711453449",
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME || " ",
   HEROKU_API_KEY: process.env.HEROKU_API_KEY || " ",
-  OWNER_NAME: process.env.OWNER_NAME || "Neeraj-X0",
-  BOT_NAME: process.env.BOT_NAME || "X-asena",
-  WORK_TYPE: process.env.WORK_TYPE || "public",
+  OWNER_NAME: process.env.OWNER_NAME || "ᗰ-I",
+  BOT_NAME: process.env.BOT_NAME || "Qᴜᴇᴇɴ ᴠɪᴄᴛᴏʀɪᴀ",
+  WORK_TYPE: process.env.WORK_TYPE || "privet",
 };

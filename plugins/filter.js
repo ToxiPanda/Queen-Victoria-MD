@@ -8,15 +8,15 @@ const { command, isPrivate, tiny } = require("../lib");
 
 const Lang = {
   FILTER_DESC:
-    "It adds a filter. If someone writes your filter, it send the answer. If you just write .filter, it show's your filter list.",
-  NO_FILTER: "*❌ There are no filters in this chat!*",
-  FILTERS: tiny("your filters for this chat"),
-  NEED_REPLY: "*❌ Please type in reply!*\n*Example:*",
+    "It adds a Filter. If someone writes your filter, it send the answer. If you just write .filter, it show's your filter list.",
+  NO_FILTER: "*❌ There are no Filters in This Chat!*",
+  FILTERS: tiny("Your Filters for This Chat"),
+  NEED_REPLY: "*❌ Please Type in Reply!*\n*Example:*",
   FILTERED: "*✅ Successfully set* ```{}``` *to filter!*",
   STOP_DESC: "Stops the filter you added previously.",
   NEED_FILTER: "*❌ Please type a filter!*\n*Example:*",
-  ALREADY_NO_FILTER: "*❌ There is already no filter like this!*",
-  DELETED: "*✅ The filter was successfully deleted!*",
+  ALREADY_NO_FILTER: "*❌ There is Already no Filter Like This!*",
+  DELETED: "*✅ The Filter was Successfully Deleted!*",
 };
 
 command(

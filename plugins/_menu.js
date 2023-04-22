@@ -1,7 +1,7 @@
-/* Copyright (C) 2022 X-Electra.
+/* Copyright (C) 2023 Queen Victoria.
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-X-Asena - X-Electra
+Queen Victoria - Mithum-Indumina
 */
 
 const events = require("../lib/event");
@@ -12,7 +12,7 @@ command(
   {
     pattern: "menu",
     fromMe: isPrivate,
-    desc: "Show All commands",
+    desc: "Show All Bot Commands",
     dontAddCommandList: true,
   },
   async (message, match) => {
@@ -32,9 +32,6 @@ Description : ${i.desc}\`\`\``
       let menu = `╭━━━━━ᆫ ${BOT_NAME} ᄀ━━━
 ┃ ⎆  *OWNER* :  ${OWNER_NAME}
 ┃ ⎆  *PREFIX* : ${prefix}
-┃ ⎆  *HOST NAME* :${hostname().split("-")[0]}
-┃ ⎆  *DATE* : ${date}
-┃ ⎆  *TIME* : ${time}
 ┃ ⎆  *COMMANDS* : ${events.commands.length} 
 ┃ ⎆  *UPTIME* : ${clockString(uptime())} 
 ╰━━━━━━━━━━━━━━━
@@ -66,7 +63,7 @@ Description : ${i.desc}\`\`\``
       category.sort().forEach((cmmd) => {
         menu += `
 ┃  ╭─────────────◆
-┃  │ ⦿---- ${cmmd} ----⦿
+┃  │ ⦿--- ${cmmd} ---⦿
 ┃  ╰┬────────────◆
 ┃  ┌┤`;
         let comad = cmnd.filter(({ type }) => type == cmmd);
@@ -77,31 +74,31 @@ Description : ${i.desc}\`\`\``
       });
 
       menu += ` ╰━━━━━━━━━━━──⊷\n`;
-      menu += `_🔖Send ${prefix}menu <command name> to get detailed information of specific command._\n*📍Eg:* _${prefix}menu plugin_`;
+      menu += `_✌️Send ${prefix}menu <command name> to get detailed information of specific command._\n*👑Eg:* _${prefix}menu plugin_`;
       return await message.client.sendMessage(message.jid, {
-        image: { url: `https://wallpapercave.com/wp/wp3891779.jpg` },
+        image: { url: `https://wallpapercave.com/uwp/uwp3525155.png` },
         caption: menu,
         footer: tiny(
-          `X-asena Public Bot\nVersion : ${require("../package.json").version}`
+          `Queen Vicroia Public Bot\nVersion : ${require("../package.json").version}`
         ),
         buttons: [
           {
             buttonId: `${prefix}ping`,
-            buttonText: { displayText: serif_B("PING 🎈") },
+            buttonText: { displayText: serif_B("PING") },
           },
           {
             buttonId: `${prefix}list`,
-            buttonText: { displayText: serif_B("LIST 🎈 ") },
+            buttonText: { displayText: serif_B("ALL CMD") },
           },
         ],
       });
     }
   }
 );
-/* Copyright (C) 2022 X-Electra.
+/* Copyright (C) 2022 Queeen Victoria
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-X-Asena - X-Electra
+Queen Victoria - Mithum-Indumina
 */
 
 command(
@@ -112,7 +109,7 @@ command(
     dontAddCommandList: true,
   },
   async (message, match, { prefix }) => {
-    let menu = `╭───〔 ${tiny("x-asena command list")} 〕────\n`;
+    let menu = `╭───〔 ${tiny("Queen Victoria Command List")} 〕────\n`;
 
     let cmnd = [];
     let cmd, desc;

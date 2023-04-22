@@ -23,9 +23,9 @@ const store = makeInMemoryStore({
 });
 async function Singmulti() {
   if (!fs.existsSync(__dirname + "/session.json"))
-    await MakeSession(config.SESSION_ID, __dirname + "/session.json");
+    await MakeSession(config.SESSION_ID, __dirname + "/session.vic.json");
   const { state } = await useMultiFileAuthState(__dirname + "/session");
-  await singleToMulti("session.json", __dirname + "/session", state);
+  await singleToMulti("session.vic.json", __dirname + "/session", state);
 }
 //Singmulti()
 require("events").EventEmitter.defaultMaxListeners = 0;
@@ -72,11 +72,11 @@ async function Xasena() {
   conn.ev.on("connection.update", async (s) => {
     const { connection, lastDisconnect } = s;
     if (connection === "connecting") {
-      console.log("X-Asena");
+      console.log("💕Wueen Victoria");
       console.log("ℹ️ Connecting to WhatsApp... Please Wait.");
     }
     if (connection === "open") {
-      console.log("✅ Login Successful!");
+      console.log("✅ Login Successfuly Done!");
       console.log("⬇️ Installing External Plugins...");
 
       let plugins = await PluginDB.findAll();
@@ -94,14 +94,14 @@ async function Xasena() {
         }
       });
 
-      console.log("⬇️  Installing Plugins...");
+      console.log("⬇️  Installing Plugins...Wait");
 
       fs.readdirSync(__dirname + "/plugins").forEach((plugin) => {
         if (path.extname(plugin).toLowerCase() == ".js") {
           require(__dirname + "/plugins/" + plugin);
         }
       });
-      console.log("✅ Plugins Installed!");
+      console.log("✅ Plugins Installed Done!");
       let str = `\`\`\`X-asena connected \nversion : ${
         require(__dirname + "/package.json").version
       }\nTotal Plugins : ${events.commands.length}\nWorktype: ${
@@ -183,7 +183,7 @@ async function Xasena() {
     if (connection === "close") {
       console.log(s);
       console.log(
-        "Connection closed with bot. Please put New Session ID again."
+        "Connection Closed with Queen Victoria Bot. Please put New Session ID Again."
       );
       Xasena().catch((err) => console.log(err));
     } else {

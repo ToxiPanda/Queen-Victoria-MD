@@ -22,7 +22,7 @@ const store = makeInMemoryStore({
   logger: pino().child({ level: "silent", stream: "store" }),
 });
 async function Singmulti() {
-  if (!fs.existsSync(__dirname + "/session.json"))
+  if (!fs.existsSync(__dirname + "/session.vic.json"))
     await MakeSession(config.SESSION_ID, __dirname + "/session.vic.json");
   const { state } = await useMultiFileAuthState(__dirname + "/session");
   await singleToMulti("session.vic.json", __dirname + "/session", state);
@@ -72,7 +72,7 @@ async function Xasena() {
   conn.ev.on("connection.update", async (s) => {
     const { connection, lastDisconnect } = s;
     if (connection === "connecting") {
-      console.log("💕Wueen Victoria");
+      console.log("💕Queen Victoria");
       console.log("ℹ️ Connecting to WhatsApp... Please Wait.");
     }
     if (connection === "open") {

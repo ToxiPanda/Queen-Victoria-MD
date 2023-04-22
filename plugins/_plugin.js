@@ -46,7 +46,7 @@ command(
 
       await installPlugin(url, plugin_name);
 
-      await message.sendMessage(`_New plugin installed : ${plugin_name}_`);
+      await message.sendMessage(`_New Plugin Installed To The Bot : ${plugin_name}_`);
     }
   }
 );
@@ -84,12 +84,12 @@ command(
     type: "user",
   },
   async (message, match) => {
-    if (!match) return await message.sendMessage("_Need a plugin name_");
+    if (!match) return await message.sendMessage("_Need a plugin name_ 😏");
 
     var plugin = await PluginDB.findAll({ where: { name: match } });
 
     if (plugin.length < 1) {
-      return await message.sendMessage("_Plugin not found_");
+      return await message.sendMessage("_Plugin not found_ 😶");
     } else {
       await plugin[0].destroy();
       delete require.cache[require.resolve("./" + match + ".js")];

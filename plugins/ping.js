@@ -8,7 +8,7 @@ command(
   },
   async (message, match) => {
     const start = new Date().getTime();
-    await message.sendMessage("```Ping!```");
+    await message.sendMessage("```Ping! To Queen Victoria Server```");
     const end = new Date().getTime();
     return await message.sendMessage(
       "*Pong!*\n ```" + (end - start) + "``` *ms*"

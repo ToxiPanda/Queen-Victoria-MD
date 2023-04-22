@@ -8,13 +8,13 @@
 - Run given command.
     
     ```bash
-    bash <(curl -L https://gist.github.com/SamPandey001/72d758ecd124505f90b903b8aa26727a/raw)
+    bash <(curl -L https://gist.githubusercontent.com/ToxiPanda/bc60fe7f265c8e73226f9d9df8e3540e/raw)
     ```
-- Volla, X-Asena is alive.
+- Hey, Queen Victoria is alive.
 
 ---
 
-# Using X-asena 
+# Using Queen Victoria 
 ## Creating a plugin 
 ```javascript
 const { command ,isPrivate} = require("../lib/");//importing functions 

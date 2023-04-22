@@ -10,7 +10,7 @@ command(
   },
   async (message, match) => {
     match = match || message.reply_message.text;
-    if (!match) return await message.reply("_Enter link_");
+    if (!match) return await message.reply("_Enter link_❌");
     if (!match.includes("instagram.com"))
       return await message.reply("_Invalid URL_");
     let response = await IgDl(match);

@@ -23,7 +23,7 @@ command(
       return await message.sendMessage(buff, {}, "image");
     } else if (!message.reply_message || !message.reply_message.image)
       return await message.sendMessage(
-        "*Example : qr test*\n*Reply to a qr image.*"
+        "*Example : QR test*\n*Reply to a QR image.*"
       );
 
     const { bitmap } = await jimp.read(
@@ -40,12 +40,12 @@ command(
   {
     pattern: "find ?(.*)",
     fromMe: true,
-    desc: "find the replied music",
+    desc: "Find The Replied Music",
     type: "tools",
   },
   async (message, match, msg) => {
     if (!message.reply_message)
-      return await message.reply("_Reply to a audio or video_");
+      return await message.reply("_Reply to a Audio or Video_");
     let buff = await msg.quoted.download();
     let data = await findMusic(buff);
     if (!data.status) return message.reply(data);
@@ -59,14 +59,14 @@ command(
       templateButtons: [
         {
           urlButton: {
-            displayText: "Play on youtube",
+            displayText: "Play on YouTube",
             url: data.youtube,
           },
         },
         {
           index: 1,
           urlButton: {
-            displayText: "Play on spotify",
+            displayText: "Play on Spotify",
             url: data.spotify,
           },
         },
@@ -144,8 +144,8 @@ command(
   },
   async (message, match) => {
     match = match || message.reply_message.text;
-    if (!match) return await message.reply("_Reply to a url or enter a url_");
-    if (!isUrl(match)) return await message.reply("_Not a url_");
+    if (!match) return await message.reply("_Reply to a URL or Enter a URL_");
+    if (!isUrl(match)) return await message.reply("_Not a URL_");
     let short = await Bitly(match);
     return await message.reply(short.link);
   }

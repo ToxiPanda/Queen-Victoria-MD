@@ -105,10 +105,10 @@ command(
   },
   async (message, match) => {
     if (!match)
-      return await message.sendMessage(`_Example: .setvar SUDO:918113921898_`);
+      return await message.sendMessage(`_Example: .setvar SUDO:757558130_`);
     const [key, value] = match.split(":");
     if (!key || !value)
-      return await message.sendMessage(`_Example: .setvar SUDO:918113921898_`);
+      return await message.sendMessage(`_Example: .setvar SUDO:94757558130_`);
     heroku
       .patch(baseURI + "/config-vars", {
         body: {
@@ -196,7 +196,7 @@ command(
     type: "heroku",
   },
   async (message) => {
-    let msg = "```Here your all Heroku vars\n\n\n";
+    let msg = "```Here your all Heroku Vars\n\n\n";
     heroku
       .get(baseURI + "/config-vars")
       .then(async (keys) => {
@@ -250,7 +250,7 @@ command(
         try {  
           await git.addRemote("heroku", git_url);
         } catch {
-          console.log("heroku remote error");
+          console.log("Heroku Remote Error ❌");
         }
         await git.push("heroku", Config.BRANCH);
 
@@ -260,7 +260,7 @@ command(
     await git.fetch();
     var commits = await git.log([Config.BRANCH + "..origin/" + Config.BRANCH]);
     if (commits.total === 0) {
-      await message.sendMessage("_Already on latest version_");
+      await message.sendMessage("_Already on Latest Version_");
     } else {
       var availupdate = "*ᴜᴘᴅᴀᴛᴇs ᴀᴠᴀɪʟᴀʙʟᴇ* \n\n";
       commits["all"].map((commit, num) => {
@@ -268,11 +268,11 @@ command(
       });
       return await message.client.sendMessage(message.jid, {
         text: availupdate,
-        footer: tiny("click here to update"),
+        footer: tiny("Click Here to Update"),
         buttons: [
           {
             buttonId: `${prefix}update now`,
-            buttonText: { displayText: tiny("update now") },
+            buttonText: { displayText: tiny("Update Now") },
           },
         ],
       });

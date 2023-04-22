@@ -7,7 +7,7 @@ command(
     type: "search",
   },
   async (message, match) => {
-    if (!match) return await message.reply("_Enter country name_");
+    if (!match) return await message.reply("_Enter Country name_");
 
     const axios = require("axios");
 
@@ -54,7 +54,7 @@ command(
     type: "search",
   },
   async (message, match) => {
-    if (!match) return await message.reply("_Enter search term_");
+    if (!match) return await message.reply("_Enter Search Term_");
     let response = await getJson(
       "https://x-asena-api.up.railway.app/quest/?q=" + encodeURIComponent(match)
     );

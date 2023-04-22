@@ -1,11 +1,11 @@
 {
-  "name": "x-asena",
-  "description": "X-asena Multi Device whatsappbot",
-  "logo": "https://i.hizliresim.com/6Bbj7i.jpg",
+  "name": "Queen Victoria",
+  "description": "Queen Victoria Multi Device whatsappbot",
+  "logo": "https://wallpapercave.com/uwp/uwp3512066.jpeg",
   "keywords": ["whatsapp"],
-  "repository": "https://github.com/Neeraj-x0/x-asena",
-  "website": "https://github.com/Neeraj-x0/x-asena",
-  "success_url": "https://github.com/Neeraj-x0/x-asena",
+  "repository": "nahi",
+  "website": "nahi",
+  "success_url": "ni",
   "stack": "container",
   "env": {
     "ANTI_LINK": {
@@ -17,7 +17,7 @@
       "required": false
     },
     "RMBG_KEY": {
-      "description": "Remove bg api key ",
+      "description": "Remove BG API key ",
       "required": false
     },
     "SESSION_ID": {
@@ -25,12 +25,12 @@
       "required": true
     },
     "HANDLERS": {
-      "description": "prefix for commands, enter false for no prefix",
+      "description": "Prefix for Commands, Enter false for no Prefix",
       "required": true,
-      "value": ","
+      "value": "."
     },
     "LOGS": {
-      "description": "need to show message logs ?",
+      "description": "Need to Show Message Logs ?",
       "required": false
     },
     "PACKNAME": {
@@ -39,7 +39,7 @@
     },
 
     "GOODBYE_MSG": {
-      "description": "goodbye Message",
+      "description": "Goodbye Message",
       "required": false
     },
     "AUTHOR": {
@@ -47,11 +47,11 @@
       "required": false
     },
     "SUDO": {
-      "description": "sudo numbers with country code seperate with , for multiple numbers",
+      "description": "Sudo Numbers with Country Code Seperate with , for Multiple Numbers",
       "required": false
     },
     "HEROKU_APP_NAME": {
-      "description": "Heroku app name, same as above entered",
+      "description": "Heroku App Name, Same as Above Entered",
       "required": true
     },
     "HEROKU_API_KEY": {

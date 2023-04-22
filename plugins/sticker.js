@@ -35,7 +35,7 @@ command(
   async (message, match) => {
     if (!match)
       return message.reply(
-        "_Enter a tg sticker url_\nEg: https://t.me/addstickers/Oldboyfinal\nKeep in mind that there is a chance of ban if used frequently"
+        "*Enter a TG sticker url*\nEg: https://t.me/addstickers/Oldboyfinal\nKeep in Mind That There is a Chance of Ban if Used Frequently"
       );
     let packid = match.split("/addstickers/")[1];
     let { result } = await getJson(
@@ -75,7 +75,7 @@ command(
   },
   async (message, match, m) => {
     if (!message.reply_message && !message.reply_message.sticker)
-      return await message.reply("_Reply to sticker_");
+      return await message.reply("_Reply to Sticker_");
     let buff = await m.quoted.download();
     let [packname, author] = match.split(",");
     await message.sendMessage(
@@ -100,7 +100,7 @@ command(
   },
   async (message, match, m) => {
     if (!message.reply_message || !message.reply_message.sticker)
-      return await message.reply("_Reply to sticker_");
+      return await message.reply("_Reply to Sticker_");
     let img = new Image();
     await img.load(await m.quoted.download());
     const exif = JSON.parse(img.exif.slice(22).toString());

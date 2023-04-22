@@ -14,13 +14,13 @@ command(
   async (message,match, m) => {
     var newSudo = (message.mention[0]).split("@")[0] || (message.reply_message.jid).split("@")[0]
     if (!newSudo)
-      return await m.sendMessage("*reply to a number*", { quoted: m });
+      return await m.sendMessage("*Reply to a Number*", { quoted: m });
     var setSudo = (SUDO + "," + newSudo).replace(/,,/g, ",");
     setSudo = setSudo.startsWith(",") ? setSudo.replace(",", "") : setSudo;
-    await message.sendMessage("_new sudo numbers are:_" + setSudo, {
+    await message.sendMessage("*_New Sudo Numbers Are:_*" + setSudo, {
       quoted: m,
     });
-    await message.sendMessage("_It takes 30 seconds to make effect_", { quoted: m });
+    await message.sendMessage("_It Takes 30 Seconds to Make Effect_", { quoted: m });
     await heroku
       .patch(baseURI + "/config-vars", { body: { SUDO: setSudo } })
       .then(async (app) => {});
